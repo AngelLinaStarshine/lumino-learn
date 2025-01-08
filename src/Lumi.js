@@ -8,7 +8,7 @@ const Lumi = () => {
 
   return visible ? (
     <Container>
-      {/* Animated Fire Effect */}
+  
       <FireIcon
         initial={{ scale: 1, opacity: 0.8 }}
         animate={{
@@ -23,8 +23,6 @@ const Lumi = () => {
       >
         <FaFire />
       </FireIcon>
-
-      {/* Speech Bubble */}
       <SpeechBubble
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
