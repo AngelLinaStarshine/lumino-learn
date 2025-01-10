@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import HomePage from "./HomePage";
 import CoursesPage from "./CoursesPage";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import Lumi from "./Lumi"; // Import the Lumi component
 import "./App.css";
 
 const Layout = ({ children }) => {
   return (
     <>
-  
       <nav>
         <ul>
           <li>
@@ -45,6 +45,9 @@ const Layout = ({ children }) => {
         </div>
         <p>&copy; {new Date().getFullYear()} Luminolearn Academy. All rights reserved.</p>
       </footer>
+
+      {/* Add Lumi to Layout to show it on every page */}
+      <Lumi />
     </>
   );
 };

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Lumi from "./Lumi"; 
 import "./App.css";
 
 

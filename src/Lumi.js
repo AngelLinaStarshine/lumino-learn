@@ -4,35 +4,57 @@ import styled from "styled-components";
 import { FaFire } from "react-icons/fa"; 
 
 const Lumi = () => {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(true); // To control the visibility of the flame
+  const [chatVisible, setChatVisible] = useState(false); // To control the visibility of the chat window
 
-  return visible ? (
+  // Function to handle the "Ask" button click and show the chat window
+  const handleAskClick = () => {
+    setVisible(false); // Hide the flame after clicking "Ask"
+    setChatVisible(true); // Show the chat window
+  };
+
+  return (
     <Container>
-  
-      <FireIcon
-        initial={{ scale: 1, opacity: 0.8 }}
-        animate={{
-          scale: [1, 1.1, 0.9, 1],
-          opacity: [0.8, 1, 0.6, 0.8],
-          color: ["#ff4500", "#ff6347", "#ffa500", "#ff4500"],
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-        }}
-      >
-        <FaFire />
-      </FireIcon>
-      <SpeechBubble
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-      >
-        <p>Hi, I'm Lumi! Need help? Follow me!</p>
-        <button onClick={() => setVisible(false)}>Hide Lumi</button>
-      </SpeechBubble>
+      {/* Flame Icon */}
+      {visible && (
+        <FireIcon
+          initial={{ scale: 1, opacity: 0.8 }}
+          animate={{
+            scale: [1, 1.1, 0.9, 1],
+            opacity: [0.8, 1, 0.6, 0.8],
+            color: ["#ff4500", "#ff6347", "#ffa500", "#ff4500"],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+          }}
+        >
+          <FaFire />
+        </FireIcon>
+      )}
+
+      {/* Ask Button (appears after flame disappears) */}
+      {!visible && !chatVisible && (
+        <button onClick={handleAskClick} style={askButtonStyle}>
+          Ask
+        </button>
+      )}
+
+      {/* Chat Window */}
+      {chatVisible && (
+        <ChatWindow>
+          <ChatHeader>
+            <h3>Chat Assistance</h3>
+            <button onClick={() => setChatVisible(false)}>Close</button>
+          </ChatHeader>
+          <ChatContent>
+            <p>How can I assist you today?</p>
+            {/* Add more chat functionality here */}
+          </ChatContent>
+        </ChatWindow>
+      )}
     </Container>
-  ) : null;
+  );
 };
 
 export default Lumi;
@@ -66,30 +88,61 @@ const FireIcon = motion(styled.div`
   }
 `);
 
-const SpeechBubble = motion(styled.div`
-  background: white;
-  color: #002855;
-  padding: 10px;
-  border-radius: 10px;
+const askButtonStyle = {
+  backgroundColor: "#ffa500",
+  padding: "10px 20px",
+  border: "none",
+  borderRadius: "5px",
+  color: "#fff",
+  cursor: "pointer",
+  fontSize: "16px",
+  zIndex: 1000,
+};
+
+const ChatWindow = styled.div`
+  position: fixed;
+  bottom: 15%;
+  right: 5%;
+  width: 300px;
+  background-color: #fff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  top: -80px;
-  right: 0;
-  font-size: 14px;
-  text-align: center;
+  border-radius: 8px;
+  padding: 10px;
+  z-index: 1001;
 
   button {
-    background: #ffa500;
+    background: #ff4500;
     border: none;
     border-radius: 5px;
-    padding: 5px 10px;
+    color: white;
+    padding: 5px;
     cursor: pointer;
     font-size: 12px;
-    margin-top: 5px;
-    color: #fff;
+    margin-top: 10px;
 
     &:hover {
-      background: #ff4500;
+      background: #ffa500;
     }
   }
-`);
+`;
+
+const ChatHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #002855;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+`;
+
+const ChatContent = styled.div`
+  margin-top: 10px;
+  font-size: 14px;
+  color: #002855;
+
+  p {
+    margin-bottom: 10px;
+  }
+`;
