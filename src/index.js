@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client"; // Import createRoot for React 18+
-import "./index.css";
+import "./App.css";
 import App from "./App";
 
 // Create the root and render the app

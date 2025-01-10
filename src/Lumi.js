@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { FaFire } from "react-icons/fa"; // Replace with a valid icon
+import { FaFire } from "react-icons/fa"; 
 
 const Lumi = () => {
   const [visible, setVisible] = useState(true);

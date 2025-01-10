@@ -1,12 +1,14 @@
 import React from "react";
-import './App.css';
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import HomePage from "./HomePage";
-import CoursesPage from "./CoursesPage.js";
+import CoursesPage from "./CoursesPage";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import "./App.css";
 
-const App = () => {
+const Layout = ({ children }) => {
   return (
-    <Router>
+    <>
+  
       <nav>
         <ul>
           <li>
@@ -24,14 +26,40 @@ const App = () => {
         </ul>
       </nav>
 
-      <div className="App">
+      <div className="content">{children}</div>
+
+      <footer className="footer">
+        <div className="social-media-links">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <FaFacebook />
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <FaTwitter />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <FaInstagram />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+          </a>
+        </div>
+        <p>&copy; {new Date().getFullYear()} Luminolearn Academy. All rights reserved.</p>
+      </footer>
+    </>
+  );
+};
+
+const App = () => {
+  return (
+    <Router>
+      <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/courses" element={<CoursesPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<LoginPage />} />
         </Routes>
-      </div>
+      </Layout>
     </Router>
   );
 };
