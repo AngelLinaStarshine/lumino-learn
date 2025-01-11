@@ -1,9 +1,10 @@
 body {
   color: #001a4d; 
-  font-family: 'Arial', sans-serif; 
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #d4f1f9, #f3e9fa);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,39 +23,55 @@ a:hover {
 .welcome-section {
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #3CB371, #20B2AA); 
-  color: white;
-  color: #003366;
+  background: linear-gradient(135deg, #c4e8e5, #f7e5c2); 
+  color: #001a4d; 
 }
 
 .welcome-banner {
   max-width: 800px;
   margin: 0 auto;
-  color: #003366;
+ 
 }
 
 .welcome-banner .blue-line {
   border: none;
+  margin: 10px auto;
+  width: 580px;
   height: 4px;
-  background: #61dafb;
-  width: 100px;
+  background: #3564c0; 
   margin: 10px auto;
 }
 
 .welcome-banner h1 {
-  font-size: 2.5rem;
-  color: white;
+  font-size: 4rem; 
+  margin: 0;
+  color: #001a4d; 
+  background: linear-gradient(90deg, #800080, #8a2be2, #ff69b4, #40e0d0); /* Purple, Violet, Pink, and Turquoise */
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  animation: gradientMove 3s infinite; 
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 .welcome-banner h3 {
-  font-size: 1.5rem;
-  color: #e6f7ff;
+  font-size: 1.8rem;
+  color: #003366; 
 }
 
 .welcome-banner p {
-  font-size: 1.1rem;
-  color: #f0f8ff;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  color: #004080;
+  line-height: 1.9;
 }
 
 
@@ -67,7 +84,7 @@ a:hover {
 
 .commitment-carousel-section h2 {
   font-size: 2.5rem;
-  color: #003366;
+  color: #001a4d; 
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 40px;
@@ -89,7 +106,7 @@ a:hover {
   padding: 30px;
   border-radius: 10px;
   text-align: center;
-  color: white;
+  color: #001a4d; 
   transition: transform 0.5s, background-color 0.5s;
 }
 
@@ -104,15 +121,13 @@ a:hover {
 }
 
 .block-1 {
-  background-color: #efae96; 
+  background-color: #d4f1f9; 
 }
-
 .block-2 {
-  background-color: #b3a0f6; 
+  background-color: #f3e9fa;
 }
-
 .block-3 {
-  background-color: #92e092; 
+  background-color: #f7e5c2; 
 }
 
 .commitment-block:hover {
@@ -151,13 +166,12 @@ a:hover {
 
 .parent-partnership-section {
   padding: 60px 20px;
-  background-color: #003366;
-  color: white;
+  background-color: #d4f1f9; 
+  color: #001a4d; 
   text-align: center;
   border-radius: 8px;
   margin-bottom: 60px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  opacity: 0;
   animation: fadeIn 1s forwards;
 }
 
@@ -166,12 +180,12 @@ a:hover {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 30px;
-  color: #f0f8ff;
+  color: #001a4d; 
 }
 
 .parent-partnership-section p {
   font-size: 1.1rem;
-  color: #e6f7ff;
+  color: #003366; 
   line-height: 1.8;
   animation: textZoomIn 1.2s ease-out;
 }
@@ -183,17 +197,17 @@ a:hover {
 
 .enroll-section {
   padding: 60px 20px;
-  background-color: #f7f9fc;
+  background-color: #f3e9fa; 
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   opacity: 0;
-  animation: fadeIn 1s forwards;
+  animation: fadeInText 1s forwards;
 }
 
 .enroll-section h2 {
   font-size: 2.5rem;
-  color: #003366;
+  color: #001a4d; 
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -208,7 +222,7 @@ a:hover {
 
 .enroll-section h3 {
   font-size: 1.5rem;
-  color: #61dafb;
+  color: #003366;
   font-weight: bold;
   margin-top: 20px;
   opacity: 0;
@@ -219,9 +233,6 @@ a:hover {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
-
-
-
 
 button {
   background: linear-gradient(90deg, #ff4500, #ff6347, #ffa500, #ff4500);
@@ -248,18 +259,29 @@ button:hover {
     background-position: 100% 50%;
   }
 }
-
-button {
-  background: linear-gradient(90deg, #ff4500, #ff6347, #ffa500, #ff4500);
-  background-size: 300% 100%;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  animation: gradientShift 3s infinite;
+.age-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
 }
+
+.age-button {
+  background-color: #61dafb; /* Original button color */
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-weight: 600;
+}
+
+.age-button:hover {
+  background-color: #003366; /* Slightly darker blue */
+  transform: scale(1.05);
+}
+
 
 
 .footer {
@@ -423,3 +445,66 @@ nav ul li a:hover {
 }
 
 
+
+
+
+.hero-section {
+  background: linear-gradient(to right, #c1e7ea, #d9b4db); 
+  color: #001a4d;
+  text-align: center;
+  padding: 50px 20px;
+}
+.hero-section p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+
+/* Subject Section */
+.subject-section {
+  padding: 40px;
+  margin: 20px auto;
+}
+
+.subject-title {
+  font-size: 2rem;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Program Grid */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Program Card */
+.program-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+.program-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.program-card h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.dropdown-container {
+  margin-top: 15px;
+}
+
+.dropdown {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
