@@ -3,21 +3,34 @@ import { motion } from "framer-motion";
 import "./App.css"; // Ensure to update your CSS file as outlined below.
 
 const HeroSection = () => (
-  <div className="hero-section">
+  <div className="home-container">
+    {/* Welcome Section */}
     <div className="welcome-section">
       <motion.div
-        initial={{ opacity: 0, y: -50 }}
+        initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="hero-content"
+        className="welcome-banner"
       >
-        <h1>LuminoLearn</h1>
-        <hr className="blue-line" />
-        <h3>Where Learning Meets Exploration</h3>
-        <p>
-          Empowering young minds through innovative education, creativity, and
-          technology.
-        </p>
+        {/* Part 1: Greeting */}
+        <div className="welcome-greeting">
+          <h1>LuminoLearn Academy</h1>
+          <hr className="blue-line" />
+        </div>
+
+        {/* Part 2: Mission Statement */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+          className="mission-container"
+        >
+          <h3>Where Learning Meets Exploration</h3>
+          <p>
+            Empowering young minds through innovative education, creativity, and
+            technology.
+          </p>
+        </motion.div>
       </motion.div>
     </div>
   </div>
@@ -28,6 +41,11 @@ const ProgramCard = ({ program, ageGroups }) => {
 
   const handleDropdownChange = (event) => {
     setSelectedAge(event.target.value);
+  };
+
+  const handleLearnMore = () => {
+    alert(`Learn more about the ${program} program!`);
+    // You can replace the alert with more sophisticated logic such as opening a modal or redirecting to another page.
   };
 
   return (
@@ -52,6 +70,9 @@ const ProgramCard = ({ program, ageGroups }) => {
             </option>
           ))}
         </select>
+        <button className="learn-more-button" onClick={handleLearnMore}>
+          Learn More...
+        </button>
       </div>
     </motion.div>
   );
@@ -105,7 +126,6 @@ const coursesData = [
     programs: [
       { name: "Art & Crafts", ageGroups: ["3-4 years", "4-5 years", "5-6 years"] },
       { name: "Digital Art", ageGroups: ["4-5 years", "5-6 years", "6-7 years"] },
-      
     ],
   },
 ];

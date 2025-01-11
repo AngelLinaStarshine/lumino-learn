@@ -1,10 +1,23 @@
 body {
-  color: #001a4d; 
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  background: linear-gradient(to right, #d4f1f9, #f3e9fa);
+  font-family: Arial, sans-serif;
+  background: linear-gradient(145deg, #a7f5ed, #f3a7f3);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite; 
+  color: #333; 
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,18 +32,47 @@ a {
 a:hover {
   color: #003366;
 }
-
+.home-container {
+ 
+  font-family: Arial, sans-serif;
+}
 .welcome-section {
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #c4e8e5, #f7e5c2); 
+  
   color: #001a4d; 
 }
-
+.welcome-greeting h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  text-align: center;
+ 
+  background: linear-gradient(135deg, #800080, #40e0d0);
+  color: white;
+}
+.welcome-description {
+  margin-top: 20px;
+}
 .welcome-banner {
   max-width: 800px;
   margin: 0 auto;
  
+}
+
+.learn-more-button {
+  margin-left: 15px;
+  padding: 8px 20px;
+  background-color: #e457e4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.learn-more-button:hover {
+  background-color: #7fece1;
 }
 
 .welcome-banner .blue-line {
@@ -46,7 +88,7 @@ a:hover {
   font-size: 4rem; 
   margin: 0;
   color: #001a4d; 
-  background: linear-gradient(90deg, #800080, #8a2be2, #ff69b4, #40e0d0); /* Purple, Violet, Pink, and Turquoise */
+  background: linear-gradient(90deg, #800080, #8a2be2, #ff69b4, #40e0d0); 
   background-size: 300% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
@@ -74,10 +116,27 @@ a:hover {
   line-height: 1.9;
 }
 
+.mission-container {
+  background: linear-gradient(145deg, #7fece1, #e457e4);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mission-container h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.mission-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
 
 .commitment-carousel-section {
-  background-color: #f7f9fc;
-  padding: 60px 20px;
+
+ 
   text-align: center;
   margin-bottom: 60px;
 }
@@ -129,6 +188,9 @@ a:hover {
 .block-3 {
   background-color: #f7e5c2; 
 }
+.block-4 {
+  background-color: #f7c2d3; 
+}
 
 .commitment-block:hover {
   transform: scale(1.05);
@@ -164,36 +226,6 @@ a:hover {
   100% { transform: translateX(0); opacity: 1; }
 }
 
-.parent-partnership-section {
-  padding: 60px 20px;
-  background-color: #d4f1f9; 
-  color: #001a4d; 
-  text-align: center;
-  border-radius: 8px;
-  margin-bottom: 60px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s forwards;
-}
-
-.parent-partnership-section h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 30px;
-  color: #001a4d; 
-}
-
-.parent-partnership-section p {
-  font-size: 1.1rem;
-  color: #003366; 
-  line-height: 1.8;
-  animation: textZoomIn 1.2s ease-out;
-}
-
-@keyframes textZoomIn {
-  0% { transform: scale(0.9); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
 
 .enroll-section {
   padding: 60px 20px;
@@ -267,7 +299,7 @@ button:hover {
 }
 
 .age-button {
-  background-color: #61dafb; /* Original button color */
+  background-color: #61dafb; 
   color: white;
   font-size: 1.1rem;
   padding: 12px 25px;
@@ -278,11 +310,9 @@ button:hover {
 }
 
 .age-button:hover {
-  background-color: #003366; /* Slightly darker blue */
+  background-color: #003366; 
   transform: scale(1.05);
 }
-
-
 
 .footer {
   position: fixed;
@@ -444,10 +474,6 @@ nav ul li a:hover {
   outline: none; 
 }
 
-
-
-
-
 .hero-section {
   background: linear-gradient(to right, #c1e7ea, #d9b4db); 
   color: #001a4d;
@@ -460,7 +486,6 @@ nav ul li a:hover {
 }
 
 
-/* Subject Section */
 .subject-section {
   padding: 40px;
   margin: 20px auto;
@@ -473,14 +498,14 @@ nav ul li a:hover {
   text-align: center;
 }
 
-/* Program Grid */
+
 .programs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-/* Program Card */
+
 .program-card {
   background: white;
   border-radius: 15px;

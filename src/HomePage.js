@@ -1,24 +1,35 @@
 import React from "react";
-import { Swiper, SwiperSlide } from 'swiper/react'; 
-import 'swiper/css';  
-import { Autoplay, Pagination, Navigation } from 'swiper';  
-import { motion } from 'framer-motion';  
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Autoplay, Pagination, Navigation } from "swiper";
+import { motion } from "framer-motion";
 import "./App.css";
 
 const HomePage = () => {
   return (
     <div className="home-container">
-    
+      {/* Welcome Section */}
       <div className="welcome-section">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
+          className="welcome-banner"
         >
-          <div className="welcome-banner">
-            <h2>Welcome to </h2>
+          {/* Part 1: Greeting */}
+          <div className="welcome-greeting">
+            <h2>Welcome to</h2>
             <h1>LuminoLearn Academy</h1>
             <hr className="blue-line" />
+          </div>
+
+          {/* Part 2: Mission Statement */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.5, duration: 1 }}
+            className="mission-container"
+          >
             <h3>Empowering Minds, Illuminating Futures</h3>
             <p>
               At LuminoLearn Academy, we redefine learning by focusing on
@@ -26,17 +37,18 @@ const HomePage = () => {
               preparing your child for a future filled with opportunity and
               success.
             </p>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
 
+      {/* Commitment Section */}
       <div className="commitment-carousel-section">
         <motion.h2
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         >
-          Our Commitment to Excellence
+        {/* Our Commitment to Excellence */}
         </motion.h2>
 
         <Swiper
@@ -51,7 +63,7 @@ const HomePage = () => {
             clickable: true,
           }}
           navigation={true}
-          modules={[Autoplay, Pagination, Navigation]} 
+          modules={[Autoplay, Pagination, Navigation]}
           className="commitment-carousel"
         >
           <SwiperSlide className="commitment-slide">
@@ -81,30 +93,23 @@ const HomePage = () => {
               </p>
             </div>
           </SwiperSlide>
-        </Swiper>
-      </div>
-
-      <div className="parent-partnership-section">
-        <motion.h2
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-        >
-          Parent Partnership and Progress Tracking
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
-        >
-          At LuminoLearn Academy, we believe that parent involvement is key to
+          <SwiperSlide className="commitment-slide">
+            <div className="commitment-block block-4">
+              <strong> Parent Partnership and Progress Tracking</strong>
+              <p>
+              At LuminoLearn Academy, we believe that parent involvement is key to
           student success. Our platform provides real-time progress tracking,
           detailed reports, and regular consultations to ensure your child
           reaches their full potential.
-        </motion.p>
+              </p>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
 
-  
+     
+
+      {/* Enroll Section */}
       <div className="enroll-section">
         <motion.h2
           initial={{ opacity: 0, scale: 0.9 }}
@@ -130,6 +135,7 @@ const HomePage = () => {
           Join LuminoLearn Academy today and watch your child shine like never
           before!
         </motion.h3>
+        <button>Join Us Today</button>
       </div>
     </div>
   );
