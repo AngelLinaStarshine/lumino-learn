@@ -105,7 +105,7 @@ const coursesData = [
     programs: [
       { name: "Art & Crafts", ageGroups: ["3-4 years", "4-5 years", "5-6 years"] },
       { name: "Digital Art", ageGroups: ["4-5 years", "5-6 years", "6-7 years"] },
-      { name: "Music & Dance", ageGroups: ["5-6 years", "6-7 years", "7-8 years"] },
+      
     ],
   },
 ];
