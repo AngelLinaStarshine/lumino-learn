@@ -1,54 +1,33 @@
+
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(145deg, #a7f5ed, #f3a7f3);
   background-size: 400% 400%;
   animation: gradientShift 10s ease infinite; 
-  color: #333; 
+  color: #0b2a68; 
 }
 
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 h1, h2, h3, h4, h5, h6 {
   color: #0b2a68; 
 }
 
-a {
-  color: #001a4d;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #003366;
-}
 .home-container {
- 
-  font-family: Arial, sans-serif;
+  font-family: "Ribeye", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .welcome-section {
   text-align: center;
   padding: 40px 20px;
-  
-  color: #001a4d; 
+  color: #0b2a68; 
 }
 .welcome-greeting h1 {
   font-size: 3.5rem;
   margin: 0;
   text-align: center;
- 
-  background: linear-gradient(135deg, #800080, #40e0d0);
-  color: white;
+  background:  #d6ed89b1;
 }
 .welcome-description {
   margin-top: 20px;
@@ -71,23 +50,20 @@ a:hover {
   transition: background-color 0.3s;
 }
 
-.learn-more-button:hover {
-  background-color: #7fece1;
-}
 
 .welcome-banner .blue-line {
   border: none;
   margin: 10px auto;
-  width: 580px;
+  width: 680px;
   height: 4px;
   background: #3564c0; 
   margin: 10px auto;
 }
 
 .welcome-banner h1 {
-  font-size: 4rem; 
+  font-size: 60px; 
   margin: 0;
-  color: #001a4d; 
+  color: #0b2a68; 
   background: linear-gradient(90deg, #800080, #8a2be2, #ff69b4, #40e0d0); 
   background-size: 300% 100%;
   -webkit-background-clip: text;
@@ -107,17 +83,17 @@ a:hover {
 
 .welcome-banner h3 {
   font-size: 1.8rem;
-  color: #003366; 
+  color: #0b2a68; 
 }
 
 .welcome-banner p {
   font-size: 1.2rem;
-  color: #004080;
+  color: #0b2a68;
   line-height: 1.9;
 }
 
 .mission-container {
-  background: linear-gradient(145deg, #7fece1, #e457e4);
+  background: #d6ed89b1;
   padding: 20px;
   border-radius: 10px;
   margin-top: 20px;
@@ -132,18 +108,17 @@ a:hover {
 .mission-container p {
   font-size: 1.1rem;
   line-height: 1.6;
+  color: #0b2a68;
 }
 
 .commitment-carousel-section {
-
- 
   text-align: center;
   margin-bottom: 60px;
 }
 
 .commitment-carousel-section h2 {
   font-size: 2.5rem;
-  color: #001a4d; 
+  color: #0b2a68; 
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 40px;
@@ -156,7 +131,6 @@ a:hover {
 }
 
 .commitment-slide {
-
   display: flex;
   justify-content: center;
 }
@@ -165,7 +139,7 @@ a:hover {
   padding: 30px;
   border-radius: 10px;
   text-align: center;
-  color: #001a4d; 
+  color: #0b2a68; 
   transition: transform 0.5s, background-color 0.5s;
 }
 
@@ -180,16 +154,16 @@ a:hover {
 }
 
 .block-1 {
-  background-color: #d4f1f9; 
+  background-color: #d6ed89b1; 
 }
 .block-2 {
-  background-color: #f3e9fa;
+  background-color: #d6ed89b1;
 }
 .block-3 {
-  background-color: #f7e5c2; 
+  background-color: #d6ed89b1; 
 }
 .block-4 {
-  background-color: #f7c2d3; 
+  background-color: #d6ed89b1; 
 }
 
 .commitment-block:hover {
@@ -213,7 +187,7 @@ a:hover {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #003366;
+  background-color: #0b2a68;
 }
 
 @keyframes fadeIn {
@@ -229,7 +203,7 @@ a:hover {
 
 .enroll-section {
   padding: 60px 20px;
-  background-color: #f3e9fa; 
+  background-color: #d6ed89b1; 
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -239,14 +213,14 @@ a:hover {
 
 .enroll-section h2 {
   font-size: 2.5rem;
-  color: #001a4d; 
+  color: #0b2a68; 
   font-weight: bold;
   margin-bottom: 20px;
 }
 
 .enroll-section p {
   font-size: 1.1rem;
-  color: #555;
+  color: #0b2a68;
   margin-bottom: 30px;
   opacity: 0;
   animation: fadeInText 1.5s 0.5s forwards;
@@ -254,7 +228,7 @@ a:hover {
 
 .enroll-section h3 {
   font-size: 1.5rem;
-  color: #003366;
+  color: #0b2a68;
   font-weight: bold;
   margin-top: 20px;
   opacity: 0;
@@ -291,40 +265,53 @@ button:hover {
     background-position: 100% 50%;
   }
 }
-.age-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
+
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-.age-button {
-  background-color: #61dafb; 
-  color: white;
-  font-size: 1.1rem;
-  padding: 12px 25px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-  font-weight: 600;
-}
-
-.age-button:hover {
-  background-color: #003366; 
-  transform: scale(1.05);
+nav {
+  background: linear-gradient(145deg, #a7f5ed, #f3a7f3);
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
+  color: #003366;  
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  position: sticky;
+  top: 0;
+  font-family: "Lobster Two", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
 }
 
 .footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: #282c34;
-  color: white;
+  background: linear-gradient(145deg, #a7f5ed, #f3a7f3);
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
+  color: #003366;  
+  font-family: "Lobster Two", serif;
+  font-weight: 400;
+  font-style: normal;
   padding: 10px 0;
   text-align: center;
   z-index: 1000;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
+
 
 .social-media-links {
   display: flex;
@@ -334,30 +321,19 @@ button:hover {
 }
 
 .social-media-links a {
-  color: #61dafb;
+  color: #003366;
   font-size: 1.5rem;
   transition: color 0.3s;
 }
 
 .social-media-links a:hover {
-  color: white;
+  color: #61dafb;
 }
 
 .footer p {
   font-size: 0.9rem;
-  color: #ccc;
 }
 
-
-nav {
-  background: #282c34;
-  color: white;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  position: sticky;
-  top: 0;
-}
 
 nav ul {
   list-style: none;
@@ -366,7 +342,6 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 200px;
-  font-size: 20px;
 }
 
 nav ul li {
@@ -375,13 +350,13 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #61dafb;
+  color: #003366;
   padding: 10px 15px;
   transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: white;
+  color: #61dafb;
 }
 
 .content {
@@ -407,29 +382,6 @@ nav ul li a:hover {
   text-transform: uppercase; 
 }
 
-.age-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.age-button {
-  background-color: #61dafb;
-  color: white;
-  font-size: 1.1rem;
-  padding: 12px 25px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-  font-weight: 600; 
-}
-
-.age-button:hover {
-  background-color: #003366;
-  transform: scale(1.05); 
-}
-
 .programs {
   margin-top: 30px;
   display: flex;
@@ -438,7 +390,7 @@ nav ul li a:hover {
 }
 
 .program {
-  background: white;
+  background: #d6ed89b1;
   padding: 20px;
   border-radius: 8px;
   margin: 15px 0;
@@ -475,8 +427,8 @@ nav ul li a:hover {
 }
 
 .hero-section {
-  background: linear-gradient(to right, #c1e7ea, #d9b4db); 
-  color: #001a4d;
+  background: #d6ed89b1; 
+  color: #0b2a68;
   text-align: center;
   padding: 50px 20px;
 }
@@ -493,7 +445,7 @@ nav ul li a:hover {
 
 .subject-title {
   font-size: 2rem;
-  color: #4a4a4a;
+  color: #0b2a68;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -507,7 +459,7 @@ nav ul li a:hover {
 
 
 .program-card {
-  background: white;
+  background: #d6ed89b1;
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -520,7 +472,7 @@ nav ul li a:hover {
 
 .program-card h4 {
   font-size: 1.2rem;
-  color: #333;
+  color: #0b2a68;
   margin-bottom: 15px;
 }
 
@@ -532,4 +484,128 @@ nav ul li a:hover {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
+}
+
+/* Mobile-first approach for screens smaller than 768px */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .welcome-section {
+    padding: 20px 10px;
+  }
+
+  .welcome-greeting h1 {
+    font-size: 2.5rem;
+  }
+
+  .welcome-banner h1 {
+    font-size: 2.5rem;
+  }
+
+  .welcome-banner h3,
+  .welcome-banner p {
+    font-size: 1rem;
+  }
+
+  .welcome-banner .blue-line {
+    width: 80%;
+  }
+
+  .mission-container {
+    padding: 15px;
+    margin-top: 10px;
+  }
+
+  .mission-container h3 {
+    font-size: 1.2rem;
+  }
+
+  .mission-container p {
+    font-size: 1rem;
+  }
+
+  .commitment-carousel-section h2 {
+    font-size: 2rem;
+  }
+
+  .commitment-block {
+    padding: 20px;
+  }
+
+  .enroll-section h2 {
+    font-size: 2rem;
+  }
+
+  .enroll-section p,
+  .enroll-section h3 {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+
+  nav ul li a {
+    padding: 5px 0;
+  }
+
+  .course-section {
+    padding: 20px;
+  }
+
+  .course-section h2 {
+    font-size: 2rem;
+  }
+
+  .programs {
+    flex-direction: column;
+  }
+
+  .program {
+    width: 90%;
+  }
+
+  .program h4 {
+    font-size: 1.2rem;
+  }
+
+  .subject-section {
+    padding: 20px;
+  }
+
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .program-card {
+    padding: 15px;
+  }
+
+  .dropdown-container {
+    margin-top: 10px;
+  }
+
+  .hero-section {
+    padding: 20px 10px;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+
+  .social-media-links a {
+    font-size: 1.2rem;
+  }
 }

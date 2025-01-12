@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
             <FaLinkedin />
           </a>
         </div>
-        <p>&copy; {new Date().getFullYear()} Luminolearn Academy. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} LuminoLearn Academy. All rights reserved.</p>
       </footer>
 
       {/* Add Lumi to Layout to show it on every page */}
